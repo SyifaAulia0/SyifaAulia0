@@ -27,11 +27,11 @@ console.log(hewan.toUpperCase()) //output : KANCIL
 console.log(hewan.toUpperCase()) //output : kancil
 ```
 - charAt : untuk mengembalikan nilai dari string
-``js
+```js
 console.log(hewan.charAt(1)) //output : A
 ```
 - includes : untuk melakukan pencarian. Jika ditemukan mengembalikan nilai true, jika tidak maka akan mengembalikan nilai false
-``js
+```js
 console.log(hewan.includes("s")) //output : true
 ```
 - split 
