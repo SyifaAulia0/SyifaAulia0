@@ -107,9 +107,10 @@ console.log(date.getFullYear()); // output : 2022
 ![image](https://user-images.githubusercontent.com/114098894/193461394-e2c78305-d2a8-4f3e-ac0b-117ddf854130.png)
 
 - Ada 2 item, ketika mengakses dom :
-  1. element : Cuma html element (<span>, <div>)
-  2. node : setiap bagian terkecil di html (text, comment, <span>)
-- Element2 menggunakan dom -> traversing :
+  1. element : Cuma html element 
+  2. node : setiap bagian terkecil di html (text, comment)
+### traversing
+- Element2 menggunakan dom :
   - Ke bawah : getElementById, getElementsByClassName, getElementByTagName, querySelector family(querySelector, querySelectorAll), children
   ```html
   //index.html
