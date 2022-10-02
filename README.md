@@ -111,8 +111,79 @@ console.log(date.getFullYear()); // output : 2022
   2. node : setiap bagian terkecil di html (text, comment, <span>)
 - Element2 menggunakan dom -> traversing :
   - Ke bawah : getElementById, getElementsByClassName, getElementByTagName, querySelector family(querySelector, querySelectorAll), children
+  ```html
+  //index.html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Hallo</h1>
+
+    <ul class="list">
+      <li class="item">satu</li>
+      <li class="item">dua</li>
+      <li class="item">tiga</li>
+    </ul>
+  <script src="./script.js"></script>
+  </body>
+  </html>
+  ```
+  
+  ```js
+  //script.js //getElementById
+  let title = document.getElementById("title")
+  console.log(title) //output : <h1 id="title">Hallo</h1>
+  ```
+  ```js
+  //getElementsByClassName
+  let items = document.getElementsByClassName("item")
+  console.log(items[2]); //output : <li class="item">tiga</li>
+  
+  let list = document.getElementsByClassName("list")
+  console.log(list[0]) //output : <li class="item">satu</li>
+  
+  //children
+  console.log(list[0].children) //output : HTMLCollection(3)0: li.item1: li.item2: li.itemlength: 3[[Prototype]]: HTMLCollection
+  ```
+  ```js
+  //getElementsByTagName
+  let itemByTag = document.getElementsByTagName("li")
+  console.log(itemByTag[1]) //output : <li class="item">dua</li>
+  console.log(itemByTag.item(1)) //output : <li class="item">dua</li>
+  console.log(itemByTag.length) //output : 3
+  ```
+  ```js
+  //querySelector
+  let listQuery = document.querySelector(".list")
+  console.log(listQuery); //output : <ul class="list">
+  
+  //querySelectorAll
+  let itemQueryAll = document.querySelectorAll(".item")
+  console.log(itemQueryAll) //output : NodeList(3)0: li.item1: li.item2: li.itemlength: 3[[Prototype]]: NodeList
+  ```
   - Ke atas : parentElement, closest()
+  ```js
+  //parentElement
+  console.log(itemQuery.parentElement); //output : <ul class="list">
+  ```
+  ```js
+  //closest
+  console.log(itemQuery.closest(".list")); //output : <ul class="list">
+  ```
   - Ke samping : nextElementSibling, previousElementSibling
+  ```js
+  //previousElementSibling
+  console.log(itemQuery.previousElementSiblingc); //output : undefined
+  ```
+  ```js
+  //nextElementSibling
+  console.log(itemQuery.nextElementSibling); //output : <li class="item">dua</li>
+  ```
 - HTML Collection bukan array, cara aksesnya mirip dgn array
 - Property dan method dalam html collection: length, item(), namedItem()
 - HTML collection mirip dengan node list, keduanya memiliki length, 
