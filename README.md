@@ -100,19 +100,22 @@ console.log(Date()) // output : 'Tue Sep 27 2022 20:31:20 GMT+0700 (Indochina Ti
 console.log(date.getFullYear()); // output : 2022
 ```
 ## DOM (Document Object Model)
-- DOM (Document Object Model): jembatan supaya Bahasa pemrograman dapat berinteraksi dengan dokumen html. Dengan dom, js dapat memanipulasi html
-Dom bukan bagian dari jss, melainkan bagian dari web API untuk membuat website.
-Dom dalam bentuk tree structure
-Ada 2 item, ketika mengakses dom :
-1. element : Cuma html element, <span>, <div>
-2. node : setiap bagian terkecil di html, text, comment, <span>
-Element2 menggunakan dom -> traversing
-Ke bawah : getElementById, getElementsByClassName, getElementByTagName, querySelector family(querySelector, querySelectorAll), children
-Ke atas : parentElement, closest()
-Ke samping : nextElementSibling, previousElementSibling
-HTML Collection bukan array, cara aksesnya mirip dgn array
-Property dan method : length, item(), namedItem()
-HTML collection mirip dengan node list, keduanya memiliki length, 
-Html collection : koleksi dlm bentuk dokumen element
-Node list : dokumen dlm bentuk nodes (element nodes, attribute nodes, text nodes)
+- DOM (Document Object Model): jembatan supaya Bahasa pemrograman dapat berinteraksi dengan dokumen html. 
+- Dengan DOM, javascript dapat memanipulasi html
+- Dom bukan bagian dari JavaScript, melainkan bagian dari web API untuk membuat website.
+- Dom dalam bentuk tree structure
+![image](https://user-images.githubusercontent.com/114098894/193461394-e2c78305-d2a8-4f3e-ac0b-117ddf854130.png)
+
+- Ada 2 item, ketika mengakses dom :
+  1. element : Cuma html element (<span>, <div>)
+  2. node : setiap bagian terkecil di html (text, comment, <span>)
+- Element2 menggunakan dom -> traversing :
+  - Ke bawah : getElementById, getElementsByClassName, getElementByTagName, querySelector family(querySelector, querySelectorAll), children
+  - Ke atas : parentElement, closest()
+  - Ke samping : nextElementSibling, previousElementSibling
+- HTML Collection bukan array, cara aksesnya mirip dgn array
+- Property dan method dalam html collection: length, item(), namedItem()
+- HTML collection mirip dengan node list, keduanya memiliki length, 
+- Html collection : koleksi dlm bentuk dokumen element
+- Node list : dokumen dlm bentuk nodes (element nodes, attribute nodes, text nodes)
 
