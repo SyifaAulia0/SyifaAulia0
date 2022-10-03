@@ -24,7 +24,7 @@ console.log(hewan.toUpperCase()) //output : KANCIL
 ```
 - toLowerCase : untuk membuat huruf kecil semua
 ```js
-console.log(hewan.toUpperCase()) //output : kancil
+console.log(hewan.toLowerCase()) //output : kancil
 ```
 - charAt : untuk mengembalikan nilai dari string
 ```js
