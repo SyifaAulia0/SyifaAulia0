@@ -191,7 +191,7 @@ console.log(date.getFullYear()); // output : 2022
 - Html collection : koleksi dlm bentuk dokumen element
 - Node list : dokumen dlm bentuk nodes (element nodes, attribute nodes, text nodes)
 
-### DOM-Manipulation	
+## DOM-Manipulation	
 - dapat memberikan konten di java script
 ```html
 <!DOCTYPE html>
@@ -242,15 +242,73 @@ p.innerText = "ini adalah paragraf"
 
 ![Screenshot (2636)](https://user-images.githubusercontent.com/114098894/193527217-79e9e228-87f3-465b-8d78-dd42cbf5eb09.png)
 
-#### Append : untuk menyisipkan element di dalam element
+#### Append 
+- untuk menyisipkan element di dalam element
+```js
+app.append(p)
+```
+- output 
 
-appendChild : untuk menyisipkan dalam bentuk node (tidak dapat menerima sebuah string)
-end.remove : untuk menghapus element
-attributes 
-getAttributes : untuk melihat isi 
-setAttributes
-style.color : memberi warna
-style.border : memberi boder
-style.padding 
-style.backgroundColour 
+![Screenshot (2638)](https://user-images.githubusercontent.com/114098894/193528482-b1bb549e-2691-41c9-aae1-6dcf4529a52b.png)
+
+#### appendChild
+- untuk menyisipkan dalam bentuk node 
+```js
+let p2 = document.createElement("p")
+p2.innerText = "paragraf ke-2"
+app.appendChild(p2)
+```
+- output 
+
+![Screenshot (2639)](https://user-images.githubusercontent.com/114098894/193528916-dac85bb2-d51c-4c77-82bf-75dc69567f77.png)
+- appendChild tidak dapat menerima sebuah string
+```js
+app.appendChild("appendChild") // output : error
+```
+
+#### end.remove 
+- untuk menghapus element
+### attributes 
+```html
+    <div class="container">
+      <a href="google.com" class="link">Google</a>
+    </div>
+```
+```js
+console.log(link.attributes) // [] list attribute
+```
+#### getAttributes 
+- untuk melihat isi 
+```js
+link.getAttribute("href")); //google.com
+```
+#### setAttributes
+```js
+link.setAttribute("id", "google")  // output : add attribute
+```
+### style
+- style.color : memberi warna
+```js
+//script.js
+link.style.color = "black"
+```
+- style.border : memberi boder
+```js
+//script.js
+link.style.border = "1px solid black"
+```
+- style.padding : memberi padding
+```js
+//script.js
+link.style.padding = "5px 20px"
+```
+- style.backgroundColour : memberi background colour
+```js
+//script.js
+link.style.backgroundColor = "aqua"
+```
+- output 
+
+![Screenshot (2640)](https://user-images.githubusercontent.com/114098894/193532245-d0fcacd9-e533-453a-9e78-12432b52d27d.png)
+
 
