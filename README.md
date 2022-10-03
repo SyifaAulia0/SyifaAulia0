@@ -311,4 +311,32 @@ link.style.backgroundColor = "aqua"
 
 ![Screenshot (2640)](https://user-images.githubusercontent.com/114098894/193532245-d0fcacd9-e533-453a-9e78-12432b52d27d.png)
 
+## DOM-Event
+### Event 
+- Event : kejadian/interaksi yang terjadi pada website
+- event : click, submit, focus, blur, hover, change, scroll
+- 3 cara memberikan event :
+  -	HTML attribute
+    ```html
+    //index.html
+     <h1 onclick="alert('selamat datang')">Hallo</h1> 
+    ```
+  -	Event property
+    ```js
+    //script.js
+    let paragraf = document.getElementById("paragraf")
+    paragraf.onclick = function () {
+    alert("ini dari paragraf")
+    } // paragraf.onclick = tampilkanAlert
+    ```
+  -	AddEventListener()
+    ```js
+    //script.js
+    let button = document.getElementById("btn")
+    button.addEventListener("click", function (event) {
+    console.log(event.target)
+    alert("ini dari button")
+    })
+    ```
+- User experience itu bersifat dua arah: selain menampilkan element HTML, halaman web juga harus bisa menangkap interaksi user
 
