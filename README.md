@@ -191,3 +191,66 @@ console.log(date.getFullYear()); // output : 2022
 - Html collection : koleksi dlm bentuk dokumen element
 - Node list : dokumen dlm bentuk nodes (element nodes, attribute nodes, text nodes)
 
+### DOM-Manipulation	
+- dapat memberikan konten di java script
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <title>Document</title>
+      </head>
+  <body>
+  
+  <div id="app"></div>
+  
+  <script src="./script.js"></script>
+  </body>
+</html>
+```
+#### innerHTML
+```js
+//script.js
+let app = document.getElementById("app")
+app.innerHTML = "<h1>Hallo</h1>" 
+```
+- output
+
+![Screenshot (2632)](https://user-images.githubusercontent.com/114098894/193524431-da78fac5-341a-48b1-8809-09f9d863b179.png)
+
+#### innerText
+```js
+//script.js
+let app = document.getElementById("app")
+app.innerText = "<h1>apa kabs</h1>"
+```
+- output
+
+![Screenshot (2633)](https://user-images.githubusercontent.com/114098894/193524724-a7b20c24-38b5-412d-bb3e-ba5f309123eb.png)
+
+##### Document.createElement 
+```js
+//script.js
+let p = document.createElement("p")
+p.innerText = "ini adalah paragraf"
+```
+- output
+
+![Screenshot (2636)](https://user-images.githubusercontent.com/114098894/193527217-79e9e228-87f3-465b-8d78-dd42cbf5eb09.png)
+
+#### Append : untuk menyisipkan element di dalam element
+
+appendChild : untuk menyisipkan dalam bentuk node (tidak dapat menerima sebuah string)
+end.remove : untuk menghapus element
+attributes 
+getAttributes : untuk melihat isi 
+setAttributes
+style.color : memberi warna
+style.border : memberi boder
+style.padding 
+style.backgroundColour 
+
